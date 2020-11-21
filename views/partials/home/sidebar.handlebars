@@ -1,0 +1,73 @@
+
+            <div class="card my-4">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+              <div class="row">
+                 {{#each cate}}
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-2">
+                    <li>
+                      <a href="/category/{{id}}">{{name}}</a>
+                    </li>
+                  </ul>
+                </div>
+                {{/each}}
+             
+              </div>
+            </div>
+          </div>
+
+  <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header"> <i class="fa fa-newspaper-o"></i> Subscribe</h5>
+            <div class="card-body">
+               <form action="" method="post">
+                 <div class="form-group">
+                 <input type="email" name="email" id="email" class="form-control" placeholder="enter your email" required autocomplete="off">
+                  </div>
+                 <button type="submit" class="btn btn-danger mb-2">Subscribe</button>
+               </form>
+            </div>
+          </div>
+             <div class="card my-4">
+            <h5 class="card-header"> Popular Post</h5>
+            <div class="card-body">
+               
+            </div>
+          </div>
+            <div class="card my-4">
+            <h5 class="card-header">Ads</h5>
+            <div class="card-body">
+               <div class="w3-third">
+  <div class="w3-card">
+  <div class="w3-container w3-red">
+    <h1><b>Buy this Blog</b></h1>
+  </div>
+  <div class="w3-container w3-xlarge">
+    <p>The Newest<br>
+    <i><b>New discount</b></i><br>
+    <span class="w3-xxlarge w3-text-red"><b>HOO</b></span></p>
+    <p><del>$180</del> <span class="w3-tag w3-yellow">New!</span><br>
+    Now only $150 !!!</p>
+  </div>
+  <div class="w3-container w3-red">
+    <p class="w3-opacity">Contact: +250783462327</p>
+  </div>
+  </div>
+            </div>
+          </div>
+        </div>
+
+      </div>

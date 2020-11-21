@@ -1,0 +1,20 @@
+<h1> All Users </h1>
+<table class="table table-bordered text-center text-white">
+    <thead class="bg-dark">
+        <TR>
+        <th>ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>EMAIL</th></TR>
+    </thead>
+    <tbody class="text-dark">
+        {{#each user}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td>{{email}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

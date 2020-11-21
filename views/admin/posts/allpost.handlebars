@@ -1,0 +1,35 @@
+<h1>ALL POST</h1>
+{{>home/messages}}
+<table class="table table-bordered">
+<thead><tr>
+    <th>id</th>
+    <th>Title</th>
+    <th>Image</th>
+    <th>status</th>
+    <th>Allow Comments</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>
+</thead>
+<tbody>
+{{#each posts}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td><img src="data:image/png;base64,{{imageref}}" height="50"/></td>
+        <td>{{status}}</td>
+        <td>{{allowComment}}</td>
+        <td>{{category.name}}</td>
+         <td>{{generatetime date 'MMM Do YYYY'}}</td>
+        <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info"> <i class="fa fa-pencil"></i> Edit</a></td>
+        <td>
+            <form action="/admin/posts/{{id}}?_method=DELETE" method="post">
+            <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> DELETE</button>
+            </form>
+        </td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>

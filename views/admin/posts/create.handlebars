@@ -1,0 +1,46 @@
+<h1>Create post</h1>
+<form action="/admin/posts/create" method="post" enctype="multipart/form-data">
+
+<div class="form-group">
+<label for="title">Title</label>
+<input type="text" class="form-control" name="title" id="title" required>
+</div>
+<div class="form-group">
+<label for="author">Author</label>
+<input type="text" class="form-control" name="author" id="author" required>
+</div>
+<div class="form-group">
+<label for="file">File Upload</label>
+<input type="file" class="form-control" name="file" id="file" required>
+</div>
+<div class="form-group">
+<label for="status">status</label>
+<select name="status" id="status" class="form-control">
+    <option value="public">public</option>
+    <option value="private">private</option>
+    <option value="Draft">Draft</option>
+</select>
+</div>
+<div class="form-group">
+    <label for="allowcomments" class="form-check-label">
+    <input type="checkbox" name="allowcomments" id="allowcomments" class="form-check-input"  >
+    Allowcomments</label>
+</div>
+<div class="form-group">
+<label for="Categories">Categories</label>
+<select name="categories" id="categories" class="form-control"  >
+{{#each cate}}
+    <option value="{{id}}">{{name}}</option>
+   {{/each}}
+</select>
+</div>
+<div class="form-group">
+<label for="description">Description</label>
+<input type="text" class="form-control" name="description" id="description" required>
+</div>
+<div class="form-group">
+    <label for="body">Body</label>
+<textarea name="body" id="body" placeholder="Enter your body....." class="form-control" ></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Create Post</button>
+</form>

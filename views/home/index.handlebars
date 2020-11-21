@@ -1,0 +1,49 @@
+  <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+          <h1 class="my-4 text-white">HOME
+            
+          </h1>
+
+          <!-- Blog Post -->
+          <div class="row ">
+          {{#each post}}
+          <div class="col-lg-4">
+            <ul class="list-unstyled mb-2">
+              <li>
+          <div class="card bg-dark mb-4" style="height:520px;">
+            <img src="data:image/png;base64,{{imageref}}"  class="card-img-top rounded" />
+            <div class="card-body">
+              <h2 class="card-title  text-white">{{title}}</h2>
+              <p class="card-text text-white">{{description}}</p>
+              <a href="/post/{{slug}}" class="btn btn-primary">Read More &rarr;</a> <br>
+              <p class="text-center m-2 "><i class="fa fa-comment btn btn-light "></i> <i class="fa fa-thumbs-o-up btn btn-info"></i> </p>
+            </div>
+            <div class="card-footer text-white text-muted">
+              Posted on 
+              {{generatetime date "MMM Do YYYY"}} by {{author}}
+            </div>
+          </div>
+          </li>
+          </ul>
+          </div>
+{{/each}}
+</div>
+          <!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+              <a class="page-link" href="#">&larr; Older</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Newer &rarr;</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+<div class="col-md-4"> 
+{{>home/sidebar}}
+ </div>  
+      <!-- /.row -->
